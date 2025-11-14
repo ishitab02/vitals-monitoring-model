@@ -1,0 +1,72 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "vitals-monitoring-model"
+version = "0.1.0"
+description = "Real-time vital signs monitoring from facial video using deep learning-based remote photoplethysmography (rPPG)"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [
+    { name = "Ishita Bhattacharyya", email = "ishita02.b@gmail.com" },
+]
+keywords = [
+    "vitals",
+    "monitoring",
+    "rppg",
+    "heart-rate",
+    "deep-learning",
+    "video",
+    "heart-rate-variability",
+    "spo2",
+    "blood-pressure",
+    "respiratory-rate"
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12"
+]
+
+dependencies = [
+    "opencv-python>=4.8.0",
+    "mediapipe>=0.10.0",
+    "numpy>=1.24.0,<2.0.0",
+    "scipy>=1.10.0",
+    "pandas>=2.0.0",
+    "torch>=2.0.0",
+    "torchvision>=0.15.0"
+]
+
+[project.optional-dependencies]
+ml = [
+    "torch>=2.0.0",
+    "torchvision>=0.15.0",
+    "scikit-learn>=1.3.0"
+]
+
+[project.urls]
+Repository = "https://github.com/ishita02.b/vitals-monitoring-model"
+
+# For local development (not publishing to PyPI)
+# This tells hatch to include your package
+[tool.hatch.build.targets.wheel]
+packages = ["vitals_monitoring"]
+
+[tool.black]
+line-length = 100
+target-version = ["py310", "py311", "py312"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "--cov=vitals_monitoring"
