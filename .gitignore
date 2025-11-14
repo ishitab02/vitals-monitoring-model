@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Virtual environments
+venv/
+env/
+ENV/
+vitals/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Data logs 
+data/logs/*.json
+data/logs/*.csv
+data/logs/*.txt
+
+# OS
+.DS_Store
+Thumbs.db
+
+models/
+
+# Large files
+*.mp4
+!demo_video.mp4  
