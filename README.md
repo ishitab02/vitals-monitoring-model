@@ -34,9 +34,11 @@ VITALS-MONITORING-MODEL/
 │   └── vitals_calculation/
 │       ├── __init__.py
 │       ├── heart_rate.py
+|       |── rppg.py           # real time rPPG analysis
 │       ├── hrv_metrics.py    # SDNN, RMSSD calculation
 │       ├── spo2.py           # SpO2 estimation logic 
-│       └── stress_index.py   # Stress index calculation 
+│       ├── stress_index.py   # Stress index calculation
+|       └── tscan_model.py    # TSCAN model architecture and implementation
 ├── .gitignore
 ├── config.py                 # Central configuration file 
 └── pyproject.toml
