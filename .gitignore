@@ -28,6 +28,4 @@ Thumbs.db
 
 models/
 
-# Large files
-*.mp4
-!demo_video.mp4  
+ 
